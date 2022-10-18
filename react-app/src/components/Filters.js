@@ -31,7 +31,7 @@ export default function Filters() {
         type="text"
         placeholder="Children Ages (e.g 2,8)"
       ></input>
-      <button id="submit_btn">Find school</button>
+      <button className="submit_btn">Find school</button>
     </form>
   );
 }

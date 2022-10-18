@@ -12,7 +12,7 @@
   .brand-name {
   text-decoration: none;
   color: white;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   margin-left: 1rem;
 }
 .navigation-menu {
@@ -27,6 +27,7 @@
   margin: 0 1rem;
 }
 .navigation-menu li a {
+  color:white;
   text-decoration: none;
   display: block;
   width: 100%;
@@ -86,5 +87,4 @@
   .navigation-menu li:hover {
     background-color: #eee;
   }
-
 }
