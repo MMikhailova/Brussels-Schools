@@ -6,12 +6,12 @@
     position: relative;
     align-items: center;
     padding: 0.5rem 0rem;
-    background-color: #fff;
-  color: black;
+     background-color:#2676b7;
+     color: white;
   box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);}
   .brand-name {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 1.3rem;
   margin-left: 1rem;
 }
@@ -37,7 +37,7 @@
   width: 40px;
   padding: 0.5rem;
   border-radius: 0%;
-  background-color: #283b8b;
+  background-color: #2676b7;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: absolute;
@@ -47,7 +47,7 @@
   display: none;
 }
 .hamburger:hover {
-  background-color: #2642af;
+  background-color: #71acdd;
 }
 @media screen and (max-width: 768px) {
   .hamburger {

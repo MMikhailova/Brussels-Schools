@@ -1,5 +1,24 @@
-.filters{
-    width:100%;
-    display:flex;
-   justify-content: space-between;
+.form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);;
+    grid-template-rows: 40px 40px 40px;
+    padding: 10px 30px;
+     justify-content: center;
+column-gap: 30px;
+row-gap: 15px;
+}
+
+.form-input{
+  border: 2px solid #2676b7;
+  cursor: pointer;
+  align-items: stretch;
+}
+
+#submit_btn {
+    background-color: #2676b7;
+    color: white;
+    border: 1px solid transparent;
+    justify-self: start;
+    grid-column: 2;
 }
