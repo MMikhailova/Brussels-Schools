@@ -1,0 +1,16 @@
+.introduction {
+    width: 100%;
+    height: fit-content;
+    display:flex;
+    flex-direction: column;
+  padding: 0;
+  align-items: center;
+    background-color: lightblue;
+    justify-content: center;
+}
+
+.introduction h3, p{
+    width:200;
+ 
+
+}
