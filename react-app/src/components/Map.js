@@ -16,9 +16,12 @@ export default function Map() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {schools.map((school) => (
-        <Marker position={[school.lat, school.long]}>
+        <Marker
+          key={[school.lat, school.long]}
+          position={[school.lat, school.long]}
+        >
           <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
+            {school.name}<br/>{school.contact}
           </Popup>
         </Marker>
       ))}

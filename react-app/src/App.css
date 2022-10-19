@@ -19,10 +19,12 @@ body {
 
 .flex-container{
   display: flex;
-  height: 3000px;
+  height:100%;
   width: 100%;
 }
 .left-panel{
+  position: fixed;
+  top:60px;
   max-height: 100vh;
     background-color:white;
     padding: 10px 20px;
