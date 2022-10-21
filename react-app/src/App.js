@@ -3,12 +3,22 @@ import NavBar from "./components/NavBar";
 import Intro from "./components/Intro";
 import Filters from "./components/Filters";
 import Cards from "./components/Cards";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
+
 
 function App() {
   const [searchQuery, setSearchQuery] = useState({});
   console.log(searchQuery)
+  useEffect(() => {
+    fetch(`/data.json`)
+      .then((e) => e.json())
+      .then((response) => {
+        console.log(response);
+      })
+      .catch(console.warn);
+  }, []);
+
   return (
     <>
       <div className="header">

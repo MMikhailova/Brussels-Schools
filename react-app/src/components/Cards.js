@@ -8,17 +8,34 @@ export default function Cards() {
       {schools.map((school) => (
         <div className="card" key={school.name}>
           <img src={school.url} alt="" className="card-img"></img>
-          <div className="card-grid">
-            <h2 className="card-header">{school.name}</h2>
-            <p className="card-language bordered">{school.lang}</p>
-            <p className="card-desc">{school.desc}</p>
-            <p className="card-contact bordered">{school.contact}</p>
-            <p className="card-age bordered">{school.age}</p>
-            <p className="card-review bordered">{school.review}</p>
-            <p className="card-funding bordered">{school.funding}</p>
-          </div>
+          <table className="card-table">
+            <tr>
+              <td className="header" rowSpan="2">
+                {school.name}
+              </td>
+              <td>{school.lang}</td>
+            </tr>
+            <tr>
+              <td>{school.age}</td>
+            </tr>
+            <tr>
+              <td className="text" rowSpan="3">
+                {school.desc}
+              </td>
+              <td>{school.funding}</td>
+            </tr>
+            <tr>
+              <td>{school.contact}</td>
+            </tr>
+            <tr>
+              <td className="review">{school.review}</td>
+            </tr>
+          </table>
         </div>
       ))}
     </div>
   );
+    
+      
+
 }
