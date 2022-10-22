@@ -16,10 +16,9 @@ function App() {
   });
  const [searchResults, setSearchResults] = useState([]);
 
-
   useEffect(() => {
     const fetchSearchResults = async () => {
-      let url = `http://localhost:1337/api/schools?`
+      let url = `http://localhost:1337/api/schools?populate=image`;
       for (const [key, value] of Object.entries(searchQuery)) {
         value&&(url += `&filters[${key}][$eq]=${value}`)
         
@@ -38,7 +37,6 @@ console.log(url)
     };
     fetchSearchResults();
     return () => {
-      // this gets called when the component unmounts
     };
   }, [searchQuery]);
   return (
