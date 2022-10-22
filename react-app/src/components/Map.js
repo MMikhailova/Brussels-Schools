@@ -1,10 +1,8 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "../App.css"
-import { schools } from "../schools";
 
-
-export default function Map() {
+export default function Map({ searchResults }) {
   return (
     <MapContainer
       center={[50.8552114, 4.3053775]}
@@ -15,13 +13,15 @@ export default function Map() {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {schools.map((school) => (
+      {searchResults.map((school) => (
         <Marker
-          key={[school.lat, school.long]}
-          position={[school.lat, school.long]}
+          key={[school.attributes.lat, school.attributes.lon]}
+          position={[school.attributes.lat, school.attributes.lon]}
         >
           <Popup>
-            {school.name}<br/>{school.contact}
+            {school.attributes.name}
+            <br />
+            {school.attributes.email}
           </Popup>
         </Marker>
       ))}

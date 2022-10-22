@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schools",
+  "info": {
+    "singularName": "school",
+    "pluralName": "schools",
+    "displayName": "School",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "street": {
+      "type": "string"
+    },
+    "commune": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "siteWeb": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "lon": {
+      "type": "float"
+    },
+    "lat": {
+      "type": "float"
+    },
+    "posteCode": {
+      "type": "integer",
+      "max": 1200,
+      "min": 1000
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "language": {
+      "type": "string"
+    },
+    "funding": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}

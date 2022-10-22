@@ -1,41 +1,40 @@
 import React from 'react'
-import { schools } from '../schools';
 import "../style/card.css";
 
-export default function Cards() {
-  return (
-    <div className="cards">
-      {schools.map((school) => (
-        <div className="card" key={school.name}>
-          <img src={school.url} alt="" className="card-img"></img>
-          <table className="card-table">
+export default function Cards({ searchResults }) {
+  return < div className = "cards" >
+  {searchResults.map((school) => (
+      <div className="card" key={school.attributes.name}>
+        <img src="" alt="" className="card-img"></img>
+        <table className="card-table">
+          <tbody>
             <tr>
               <td className="header" rowSpan="2">
-                {school.name}
+                {school.attributes.name}
               </td>
-              <td>{school.lang}</td>
+              <td>{school.attributes.posteCode}</td>
             </tr>
             <tr>
-              <td>{school.age}</td>
+              <td>
+                {school.attributes.street}, {school.attributes.commune}
+              </td>
             </tr>
             <tr>
               <td className="text" rowSpan="3">
-                {school.desc}
+                {school.attributes.language}
               </td>
-              <td>{school.funding}</td>
+              <td>{school.attributes.telephone}</td>
             </tr>
             <tr>
-              <td>{school.contact}</td>
+              <td>{school.attributes.email}</td>
             </tr>
             <tr>
-              <td className="review">{school.review}</td>
+              <td className="review">{school.attributes.siteWeb}</td>
             </tr>
-          </table>
-        </div>
-      ))}
-    </div>
-  );
-    
-      
-
+          </tbody>
+        </table>
+      </div>
+    ))
+  }
+    </div >
 }
