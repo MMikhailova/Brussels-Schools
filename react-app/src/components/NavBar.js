@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
 import "../style/navbar.css";
+
+
 export default function NavBar() {
 const [isNavExpanded,setIsNavExpanded]=useState(false)
   return (
     <nav className="navigation">
+      <i className="fa-solid fa-school"></i>
       <a href="/" className="brand-name">
         BrusselSchools
       </a>
-      <button className="hamburger" onClick={()=>setIsNavExpanded(!isNavExpanded)}>
+      <button
+        className="hamburger"
+        onClick={() => setIsNavExpanded(!isNavExpanded)}
+      >
         {/* icon from heroicons.com */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +28,11 @@ const [isNavExpanded,setIsNavExpanded]=useState(false)
           />
         </svg>
       </button>
-      <div className={isNavExpanded?"navigation-menu expanded":"navigation-menu"}>
+      <div
+        className={
+          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+        }
+      >
         <ul>
           <li>
             <a href="/home">Home</a>

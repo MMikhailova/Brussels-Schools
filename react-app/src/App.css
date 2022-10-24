@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
   box-sizing: border-box;
 }
-
 body {
-  font-family: Arial;
+font-family: 'Roboto', sans-serif;
+font-size: 17.6px;
   margin: 0;
   overflow: hidden;
   height: 100%;
+  
 }
 
 .header{

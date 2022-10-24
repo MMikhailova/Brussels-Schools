@@ -20,7 +20,7 @@ export default function Filters({ setSearchQuery }) {
         <option value="german">German</option>Language
       </select>
       <select className="form-input" name="funding">
-        <option value="" hidden>
+        <option value="">
           Funding type
         </option>
         <option value="public">Public</option>
@@ -35,7 +35,7 @@ export default function Filters({ setSearchQuery }) {
         max="1200"
       ></input>
       <select className="form-input" name="type">
-        <option value="" hidden>
+        <option value="">
           Stage of education
         </option>
         <option value="preschool">Preschool</option>

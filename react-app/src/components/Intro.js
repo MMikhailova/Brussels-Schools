@@ -6,7 +6,7 @@ export default function Intro() {
       <h1>Find the BEST school in Brussels for your child</h1>
       <p>
         Practical information about all public and private schools in Brussels,
-        Belgium: languages, contacts, fees, etc.<br/> Enter your preferences and find the
+        Belgium: languages, contacts, etc.<br/> Enter your preferences and find the
         best school that best fits your child's needs.
       </p>
     </div>
