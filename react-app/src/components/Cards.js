@@ -9,33 +9,21 @@ export default function Cards({ searchResults }) {
         searchResults.map((school) => (
           <div className="card" key={school.attributes.name}>
             <img src="././photos/school.png" alt="" className="card-img"></img>
-            <table className="card-table">
-              <tbody>
-                <tr>
-                  <td className="header" rowSpan="2">
-                    {school.attributes.name}
-                  </td>
-                  <td>{school.attributes.posteCode}</td>
-                </tr>
-                <tr>
-                  <td>
-                    {school.attributes.street}, {school.attributes.commune}
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text" rowSpan="3">
-                    {school.attributes.language}
-                  </td>
-                  <td>{school.attributes.telephone}</td>
-                </tr>
-                <tr>
-                  <td>{school.attributes.email}</td>
-                </tr>
-                <tr>
-                  <td className="review">{school.attributes.siteWeb}</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="card-table">
+              <h3>{school.attributes.name}</h3>
+              <p>{school.attributes.language} speaking school</p>
+              <p>
+                {school.attributes.posteCode}, {school.attributes.commune},
+                {school.attributes.street}
+              </p>
+              <p>{school.attributes.telephone}</p>
+              <p>{school.attributes.email}</p>
+              <p>
+                <a href={school.attributes.siteWeb}>
+                  {school.attributes.siteWeb}
+                </a>
+              </p>
+            </div>
           </div>
         ))
       ) : (
