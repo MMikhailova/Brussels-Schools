@@ -8,6 +8,7 @@
 }
 /*flex container for a card*/
 .card {
+    overflow-wrap:anywhere; 
     display:flex;
     margin: 20px 0 20px 0;
     width:100%;
