@@ -19,9 +19,8 @@ export default function Map({ searchResults }) {
           position={[school.attributes.lat, school.attributes.lon]}
         >
           <Popup>
-            {school.attributes.name}
-            <br />
-            {school.attributes.email}
+            <h3>{school.attributes.name}</h3>
+            <p>{school.attributes.email}</p>
           </Popup>
         </Marker>
       ))}
