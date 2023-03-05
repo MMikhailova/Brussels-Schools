@@ -3,8 +3,10 @@ import NavBar from "./components/NavBar";
 import Intro from "./components/Intro";
 import Filters from "./components/Filters";
 import Cards from "./components/Cards";
+import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import "./App.css";
+
 
 
 function App() {
@@ -49,6 +51,7 @@ console.log(url)
           <Intro />
           <Filters setSearchQuery={setSearchQuery} />
           <Cards searchResults={searchResults} />
+          <Footer></Footer>
         </div>
         <div className="right-panel">
           <Map searchResults={searchResults} />

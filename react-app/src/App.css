@@ -20,22 +20,24 @@ font-size: 17.6px;
 
 .flex-container{
   display: flex;
-  height:1200px;
   width: 100%;
 }
+
 .left-panel{
   /* top:60px; */
+  min-height: 100vh;
   text-align: center;
   max-height: 100vh;
-    background-color:white;
-    padding: 10px 20px;
-color:black;
+  background-color:white;
+  color:black;
   width:60%;
   min-width: 0;
   overflow: auto;
   overflow-y: scroll;
 
 }
+
+
 .right-panel{
   width:40%;
   position: fixed;

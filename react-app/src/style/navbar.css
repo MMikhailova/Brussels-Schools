@@ -6,14 +6,17 @@
     position: relative;
     align-items: center;
     padding: 0.5rem 0rem 0rem 0.5rem;
-     background-color:#2676b7;
-     color: white;
-  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);}
+    background-color:#2676b7;
+    color: white;
+    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);}
+.navigation i{
+  margin-left: 0.5rem;
+  }
   .brand-name {
   text-decoration: none;
   color: white;
   font-size: 0.8rem;
-  margin-left: 0.2rem;
+  margin-left: 0.5rem;
 }
 .navigation-menu {
   margin-left: auto;
@@ -59,6 +62,7 @@
   }
      .navigation-menu.expanded ul {
     display: block;
+    height: 100vh;
   }
   .navigation-menu ul {
  /* navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar) */
