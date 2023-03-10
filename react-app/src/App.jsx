@@ -6,8 +6,8 @@ import Cards from "./components/Cards";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import "./App.css";
-
-import { removeDuplicates } from "./api/viewModels/getSchoolsVm";
+import getUniqueSchools from "./api/viewModels/getSchoolsVm"
+  
 
 
 function App() {
@@ -19,7 +19,6 @@ function App() {
   });
  const [searchResults, setSearchResults] = useState([]);
 useEffect(() => {
-  const fetchSearchResults = async () => {
     let url = `https://www.odwb.be/api/records/1.0/search/?dataset=signaletique-fase&q=&rows=3000&refine.bassin=Bruxelles`;
     searchQuery.type === "Supérieur" && (url += `&refine.niveau=Supérieur`);
     searchQuery.type === "Maternel"  &&
@@ -28,22 +27,9 @@ useEffect(() => {
      (url += `&refine.niveau=Fondamental&refine.type_d_enseignement=Primaire+ordinaire`);
   searchQuery.posteCode &&
     (url += `&refine.code_postal_de_l_etablissement=${searchQuery.posteCode}`);
+console.log(url)
+  getUniqueSchools(url).then((array) => setSearchResults(array));
 
-    console.log(url);
-// getFrenchSchools().then((v)=>console.log(v))
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      const result =data.records
-      
-  const unique=removeDuplicates(result);
-      setSearchResults(unique);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  fetchSearchResults();
-  return () => {};
 }, [searchQuery]);
 
   return (
