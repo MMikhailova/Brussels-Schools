@@ -1,6 +1,9 @@
 import React from 'react'
+
+
 import "../style/filters.css";
 export default function Filters({ setSearchQuery }) {
+
   const handleSearchClick = (e) => {
     e.preventDefault();
     setSearchQuery({
@@ -9,6 +12,7 @@ export default function Filters({ setSearchQuery }) {
       posteCode: e.target.postecode.value,
       type:e.target.type.value
     })
+
   };
   return (
     <form className="form" onSubmit={handleSearchClick}>
@@ -17,12 +21,9 @@ export default function Filters({ setSearchQuery }) {
         <option value="french">French</option>
         <option value="dutch">Dutch</option>
         <option value="english">English</option>
-        <option value="german">German</option>Language
       </select>
       <select className="form-input" name="funding">
-        <option value="">
-          Funding type
-        </option>
+        <option value="">Funding type</option>
         <option value="public">Public</option>
         <option value="private">Private</option>Type
       </select>
@@ -35,12 +36,10 @@ export default function Filters({ setSearchQuery }) {
         max="1200"
       ></input>
       <select className="form-input" name="type">
-        <option value="">
-          Stage of education
-        </option>
-        <option value="preschool">Preschool</option>
-        <option value="primary">Primary</option>
-        <option value="secondary">Secondary</option>
+        <option value="">Type of education</option>
+        <option value="Maternel">Kindergarten</option>
+        <option value="Primaire">Primary school</option>
+        <option value="Supérieur">College/High school</option>Type
       </select>
       <button type="submit" className="submit_btn">
         Find school
