@@ -17,26 +17,26 @@ The main features of the Website are:
 - [x] Filters with criteria for choosing a school
 - [x] List of schools based on chosen filters
 
-![Page](/public/Screenshot%202023-01-26%20at%2013.57.12.png)
+![Page](/public/Screenshot%20.png)
+
 ## Project goals
 
-- To practice creating documentation
-- To master DOM, event listeners and event handlers
-- To practice separating and organizing the JavaScript code into different files
-- To develop a sucessful program using HTML, CSS and JavaScript
+- Master Responsive layout with Grid and Flexbox
+- API consumption
+- React hooks
+- Deployment with Netlify
+
+## How to use
+
+I used Continuous deployment so you can already try it out by following the link [Brussels Schools Website](https://meek-alfajores-b84969.netlify.app/)
+
+## Status 
+
+The website is still in process and is going to have following features soon:
+
+- Dataset for Dutch and English schools
+- Map on the small screen devices
+- More useful information about the schools
 
 
-## Project goals is to practice
-- functional React components
-- React hooks( useState, useEffect, useRef)
-- VDOM
-- Events
-
-
-## Try to make your To do list by following the steps:   
-
-In the project directory "my-app" run "npm start".   
-Runs the app in the development mode.  
-Open http://localhost:3000 to view it in your browser.
-Make a list!
 
