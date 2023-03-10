@@ -14,13 +14,14 @@ export default function Map({ searchResults }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {searchResults.map((school) => (
+        school.fields.latitude&&school.fields.longitude&&
         <Marker
-          key={[school.attributes.lat, school.attributes.lon]}
-          position={[school.attributes.lat, school.attributes.lon]}
+          key={school.recordid}
+          position={[school.fields.latitude, school.fields.longitude]}
         >
           <Popup>
-            <h3>{school.attributes.name}</h3>
-            <p>{school.attributes.email}</p>
+            <h3>{school.fields.nom_de_l_etablissement}</h3>
+            {/* <p>{school.attributes.email}</p> */}
           </Popup>
         </Marker>
       ))}
