@@ -15,7 +15,7 @@ export default function Cards({ searchResults }) {
             ></img>
             <div className="card-table">
               <h3>{school.fields.nom_de_l_etablissement}</h3>
-              {/* <p>{school.fields.language} speaking school</p> */}
+              <p>{school.fields.lang} speaking school</p>
               <p>
                 <i className="fa-solid fa-location-dot"></i>
                 {school.fields.code_postal_de_l_etablissement},
