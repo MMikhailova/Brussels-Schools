@@ -17,7 +17,7 @@ The main features of the Website are:
 - [x] Filters with criteria for choosing a school
 - [x] List of schools based on chosen filters
 
-![Page](/public/Screenshot%20.png)
+![Page](/public/Screenshot.png)
 
 ## Project goals
 
